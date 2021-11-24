@@ -1,5 +1,5 @@
-from pathlib import Path
 import os.path
+from pathlib import Path
 import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,7 +23,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core'
+    # Project apps
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -106,3 +107,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# New Fields
+
+AUTH_USER_MODEL = 'core.User'
